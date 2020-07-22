@@ -5,3 +5,35 @@
 
 <button [disabled]="!bestMovieEver">Best movies ever</button>
 <button [hidden]="!worseMovieEver">Worse movies ever</button>
+
+{{ selectedIndex }}
+<div style="display: flex; flex-wrap: wrap">
+  
+  <div style="margin:25px">
+    <h3 [hidden]="!isSelected(0)">Chosen!</h3>
+    <img src="https://m.media-amazon.com/images/M/MV5BMTg0Njk2OTM3OF5BMl5BanBnXkFtZTYwNTAyMzc3._V1_UX182_CR0,0,182,268_AL_.jpg">
+    <br>
+    <button [disabled]="anySelected() && !isSelected(0)" (click)="onVoteClick(0)">{{ getButtonText(0) }}</button>
+  </div>
+
+  <div style="margin:25px">
+    <h3 [hidden]="!isSelected(1)">Chosen!</h3>
+    <img src="https://m.media-amazon.com/images/M/MV5BMTg0Njk2OTM3OF5BMl5BanBnXkFtZTYwNTAyMzc3._V1_UX182_CR0,0,182,268_AL_.jpg">
+    <br>
+    <button [disabled]="anySelected() && !isSelected(1)" (click)="onVoteClick(1)">{{ getButtonText(1) }}</button>
+  </div>
+
+    <div style="margin:25px">
+    <h3 [hidden]="!isSelected(2)">Chosen!</h3>
+    <img src="https://m.media-amazon.com/images/M/MV5BMTg0Njk2OTM3OF5BMl5BanBnXkFtZTYwNTAyMzc3._V1_UX182_CR0,0,182,268_AL_.jpg">
+    <br>
+    <button [disabled]="anySelected() && !isSelected(2)" (click)="onVoteClick(2)">{{ getButtonText(2) }}</button>
+  </div>
+
+    <div style="margin:25px">
+    <h3 [hidden]="!isSelected(3)">Chosen!</h3>
+    <img src="https://m.media-amazon.com/images/M/MV5BMTg0Njk2OTM3OF5BMl5BanBnXkFtZTYwNTAyMzc3._V1_UX182_CR0,0,182,268_AL_.jpg">
+    <br>
+    <button [disabled]="anySelected() && !isSelected(3)" (click)="onVoteClick(3)">{{ getButtonText(3) }}</button>
+  </div>
+</div>
